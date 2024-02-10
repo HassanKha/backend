@@ -19,6 +19,7 @@ app.use(cors({
 dotenv.config();
 app.use(express.json());
 const _dirname = path.resolve();
+app.use(express.static(__dirname + "/public"));
 //app.use(express.static(path.join(_dirname,'/client/my-project/dist')));
 const upload = multer({ dest: "uploads/" });
 
